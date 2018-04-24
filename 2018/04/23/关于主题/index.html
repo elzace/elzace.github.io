@@ -10,7 +10,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <meta name="description" content="">
-    <title>Elzace&#39;s Studio</title>
+    <title>hexo-theme-archer ���ο����ĵ� · Elzace&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -191,7 +191,7 @@
                 <a href="/" >Elzace&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name"></a>
+                <a href="#" class="post-name">hexo-theme-archer ���ο����ĵ�</a>
             </div>
     </div>
     
@@ -223,7 +223,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [Untitled Post]
+            hexo-theme-archer ���ο����ĵ�
             <!-- 404 -->
             
         </h1>
@@ -241,7 +241,7 @@ height:50vh;
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/04/24</span>
+                <span class="post-intro-time">2018/04/23</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -347,33 +347,31 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <hr>
-<p>title: archer主题二次开发<br>date: 2018-04-24 17:30:26tags:- hexo—</p>
-<p>对archer进行二次开发前请阅读本文档。</p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><ul>
-<li>docs : 文档目录</li>
-<li>layout : 模板目录</li>
-<li>source : html模板文件，供Hexo加载</li>
-<li>src : 源代码目录，会编译到source目录</li>
-<li>js : js源代码</li>
-<li><p>scss : scss源代码</p>
-<p>如果需要修改页面结构，请修改 layout 中的ejs模板文件；如果需要修改样式，请修改 src/scss 中的scss文件；如果需要修改脚本，请修改 src/js 中的js文件。对scss和js的修改需要编译才能生成到 source 中，请参照下面的开发步骤。</p>
-<p>提示：如果 hexo s 或 hexo g 很慢，在Hexo目录下的配置文件中加入以下字段忽略modules和.git文件。</p>
+        <p>��archer���ж��ο���ǰ���Ķ����ĵ���</p>
+<h2 id="L¼�u"><a href="#L¼�u" class="headerlink" title="Ŀ¼�ṹ"></a>Ŀ¼�ṹ</h2><ul>
+<li>docs : �ĵ�Ŀ¼</li>
+<li>layout : ģ��Ŀ¼</li>
+<li>source : htmlģ���ļ�����Hexo����</li>
+<li>src : Դ����Ŀ¼������뵽sourceĿ¼</li>
+<li>js : jsԴ����</li>
+<li><p>scss : scssԴ����</p>
+<p>�����Ҫ�޸�ҳ��ṹ�����޸� layout �е�ejsģ���ļ��������Ҫ�޸���ʽ�����޸� src/scss �е�scss�ļ��������Ҫ�޸Ľű������޸� src/js �е�js�ļ�����scss��js���޸���Ҫ����������ɵ� source �У����������Ŀ������衣</p>
+<p>��ʾ����� hexo s �� hexo g ��������HexoĿ¼�µ������ļ��м��������ֶκ���modules��.git�ļ���</p>
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ignore: [</span><br><span class="line">       &apos;**/themes/**/node_modules/**&apos;, </span><br><span class="line">       &apos;**/themes/**/node_modules&apos;,</span><br><span class="line">       &apos;**/themes/**/.git&apos;,</span><br><span class="line">       &apos;**/themes/**/.git/**&apos;</span><br><span class="line">       ]</span><br></pre></td></tr></table></figure>
-<h2 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h2><h4 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h4><ul>
-<li><p>在archer目录下执行 <code>npm i</code><br><br>安装所需依赖（速度过慢的话请使用淘宝镜像）。<br><br>后续步骤开发分为本地开发，及编译发布两个过程。<br><br>本地开发时在修改源代码时可以实时自动编译并刷新预览，编译发布在本地开发完成后编译压缩发布资源。（当然也可以跳过本地开发步骤直接修改源代码然后执行编译发布）。</p>
+<h2 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h2><h4 id="��װ����"><a href="#��װ����" class="headerlink" title="��װ����"></a>��װ����</h4><ul>
+<li><p>��archerĿ¼��ִ�� <code>npm i</code><br><br>��װ�����������ٶȹ����Ļ���ʹ���Ա����񣩡�<br><br>�������迪����Ϊ���ؿ����������뷢���������̡�<br><br>���ؿ���ʱ���޸�Դ����ʱ����ʵʱ�Զ����벢ˢ��Ԥ�������뷢���ڱ��ؿ�����ɺ����ѹ��������Դ������ȻҲ�����������ؿ�������ֱ���޸�Դ����Ȼ��ִ�б��뷢������</p>
 </li>
-<li><p>注意：在开发时请先删除Hexo目录下的 public 文件夹避免造成干扰。</p>
+<li><p>ע�⣺�ڿ���ʱ����ɾ��HexoĿ¼�µ� public �ļ��б�����ɸ��š�</p>
 </li>
 </ul>
-<h4 id="本地开发"><a href="#本地开发" class="headerlink" title="本地开发"></a>本地开发</h4><ul>
-<li>在Hexo目录下执行 hexo s 启动本地服务器。</li>
-<li>在archer目录下执行 gulp dev 进入本地开发模式。<br><br>该模式会监视 src 和 layout 下的文件修改，实时进行编译，然后通过BrowserSync在 localhost:3000 （默认）下自动刷新页面（其他位置的文件修改并不会自动刷新页面，需手动刷新）。</li>
+<h4 id="���ؿ���"><a href="#���ؿ���" class="headerlink" title="���ؿ���"></a>���ؿ���</h4><ul>
+<li>��HexoĿ¼��ִ�� hexo s ����ط�������</li>
+<li>��archerĿ¼��ִ�� gulp dev ���뱾�ؿ���ģʽ��<br><br>��ģʽ����� src �� layout �µ��ļ��޸ģ�ʵʱ���б��룬Ȼ��ͨ��BrowserSync�� localhost:3000 ��Ĭ�ϣ����Զ�ˢ��ҳ�棨����λ�õ��ļ��޸Ĳ������Զ�ˢ��ҳ�棬���ֶ�ˢ�£���</li>
 </ul>
-<h4 id="编译发布"><a href="#编译发布" class="headerlink" title="编译发布"></a>编译发布</h4><ul>
-<li>在archer目录下执行 gulp build 即可编译到 source 文件夹下。<br>编译完成后便可生成重新生成blog。</li>
+<h4 id="���뷢��"><a href="#���뷢��" class="headerlink" title="���뷢��"></a>���뷢��</h4><ul>
+<li>��archerĿ¼��ִ�� gulp build ���ɱ��뵽 source �ļ����¡�<br>������ɺ���������������blog��</li>
 </ul>
 
     </article>
@@ -381,12 +379,17 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/04/24/archer主题二次开发/" title=  >
+                    <div class="nextTitle">[Untitled Post]</div>
+                </a>
+            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/04/23/关于主题/" title= hexo-theme-archer ���ο����ĵ� >
-                    <div class="prevTitle">hexo-theme-archer ���ο����ĵ�</div>
+                <a href= "/2018/04/23/测试“/" title= 测试 >
+                    <div class="prevTitle">测试</div>
                 </a>
             
         </li>
@@ -492,7 +495,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录结构"><span class="toc-number">1.</span> <span class="toc-text">目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发步骤"><span class="toc-number">2.</span> <span class="toc-text">开发步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装依赖"><span class="toc-number">2.0.1.</span> <span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#本地开发"><span class="toc-number">2.0.2.</span> <span class="toc-text">本地开发</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编译发布"><span class="toc-number">2.0.3.</span> <span class="toc-text">编译发布</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#L¼�u"><span class="toc-number">1.</span> <span class="toc-text">Ŀ¼�ṹ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#��������"><span class="toc-number">2.</span> <span class="toc-text">��������</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#��װ����"><span class="toc-number">2.0.1.</span> <span class="toc-text">��װ����</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#���ؿ���"><span class="toc-number">2.0.2.</span> <span class="toc-text">���ؿ���</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#���뷢��"><span class="toc-number">2.0.3.</span> <span class="toc-text">���뷢��</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
